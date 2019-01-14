@@ -51,7 +51,7 @@
          * @return  viod
          */
         
-        public function __construct($savePath, $saveURL, $formats, $randomNameType = 1, $randomLength = '', $cover = true, $maxSize = 1024)
+        public function __construct($savePath, $saveURL, $formats, $randomNameType = 2, $randomLength = '', $cover = true, $maxSize = 1024)
         {
             $this->savePath       = $savePath;
             $this->saveURL        = $saveURL;
@@ -110,9 +110,10 @@
                 
                 return false;
             }
+            
 
             $this->fileExt  = $this->getFileExt($this->files["name"]); //取得扩展名
-            
+           
             $this->setSeveName();
             
             return $this->moveFile();
@@ -145,6 +146,8 @@
                 
                 return false;
             }
+
+    
 
             if (!$this->cover) //当不能覆盖时
             {
