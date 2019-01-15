@@ -59,6 +59,7 @@
             $this->maxSize        = $maxSize;
             $this->cover          = $cover;
             $this->randomNameType = $randomNameType;
+            // var_dump($randomNameType);die;
             $this->randomLength   = $randomLength;
         }
 
